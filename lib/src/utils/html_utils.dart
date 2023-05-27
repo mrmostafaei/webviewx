@@ -17,7 +17,7 @@ enum EmbedPosition {
 /// HTML utils: wrappers, parsers, splitters etc.
 class HtmlUtils {
   /// Checks if the source looks like HTML
-   bool isFullHtmlPage(String src) {
+   static bool isFullHtmlPage(String src) {
     final _src = src.trim().toLowerCase();
     return _src.startsWith(RegExp('<!DOCTYPE html>', caseSensitive: false)) &&
         // I didn't forget the closing bracket here.
@@ -27,7 +27,7 @@ class HtmlUtils {
   }
 
   /// Wraps markup in HTML tags
-   String wrapHtml(String src, String? iframeId) {
+   static String wrapHtml(String src, String? iframeId) {
     return '''
     <!DOCTYPE html>
     <html lang="en">
@@ -48,7 +48,7 @@ class HtmlUtils {
   /// Depending on the params passed to it, this function
   /// embeds ("burns") javascript functions inside the HTML source, wraps it
   /// and/or URI-encodes it.
-   String preprocessSource(
+   static String preprocessSource(
     String src, {
     Set<EmbeddedJsContent> jsContent = const {},
     bool forWeb = false,

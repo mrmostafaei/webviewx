@@ -225,7 +225,7 @@ class _WebViewXState extends State<WebViewX> {
   // Returns initial data
   String? _initialContent() {
     if (widget.initialSourceType == SourceType.html) {
-      return HtmlUtils().preprocessSource(
+      return HtmlUtils.preprocessSource(
         widget.initialContent,
         jsContent: widget.jsContent,
         encodeHtml: true,
@@ -248,7 +248,7 @@ class _WebViewXState extends State<WebViewX> {
   // Prepares the source depending if it is HTML or URL
   String _prepareContent(WebViewContent model) {
     if (model.sourceType == SourceType.html) {
-      return HtmlUtils().preprocessSource(
+      return HtmlUtils.preprocessSource(
         model.source,
         jsContent: widget.jsContent,
 

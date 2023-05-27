@@ -178,7 +178,7 @@ class _WebViewXState extends State<WebViewX> {
   }
 
   void _registerView(String viewType) {
-    ui.platformViewRegistry().registerViewFactory(viewType, (int viewId) {
+    ui.platformViewRegistry.registerViewFactory(viewType, (int viewId) {
       return iframe;
     });
   }
@@ -415,7 +415,7 @@ class _WebViewXState extends State<WebViewX> {
 
     switch (model.sourceType) {
       case SourceType.html:
-        iframe.srcdoc = HtmlUtils().preprocessSource(
+        iframe.srcdoc = HtmlUtils.preprocessSource(
           source,
           jsContent: widget.jsContent,
           windowDisambiguator: iframeViewType,
@@ -425,7 +425,7 @@ class _WebViewXState extends State<WebViewX> {
       case SourceType.url:
       case SourceType.urlBypass:
         if (source == 'about:blank') {
-          iframe.srcdoc = HtmlUtils().preprocessSource(
+          iframe.srcdoc = HtmlUtils.preprocessSource(
             '<br>',
             jsContent: widget.jsContent,
             windowDisambiguator: iframeViewType,
@@ -584,7 +584,7 @@ class _WebViewXState extends State<WebViewX> {
       pageSource,
     );
 
-    iframe.srcdoc = HtmlUtils().preprocessSource(
+    iframe.srcdoc = HtmlUtils.preprocessSource(
       replacedPageSource,
       jsContent: widget.jsContent,
       windowDisambiguator: iframeViewType,

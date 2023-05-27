@@ -1,3 +1,8 @@
+## 0.2.3
+
+- Compatible Dart 3
+- Fixed bugs
+
 ## 0.2.2
 
 - Compatible Dart 3

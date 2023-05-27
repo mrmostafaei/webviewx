@@ -2,7 +2,7 @@
 // ignore: camel_case_types
 class platformViewRegistry {
   /// See https://github.com/flutter/flutter/issues/41563 for more info
-   void registerViewFactory(
+   static void registerViewFactory(
     String viewId,
     dynamic Function(int viewId) callback,
   ) =>
