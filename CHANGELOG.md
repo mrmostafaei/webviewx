@@ -1,3 +1,7 @@
+## 0.2.4
+
+- Updated all dependencies
+
 ## 0.2.3
 
 - Compatible Dart 3
