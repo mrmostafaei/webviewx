@@ -1,3 +1,7 @@
+## 0.2.5
+
+- Updated all dependencies
+
 ## 0.2.4
 
 - Updated all dependencies
